@@ -1,6 +1,7 @@
 #JobInfoAdd
 
 
+
 import sqlite3
 
 conn = sqlite3.connect('jobInfo.db')
@@ -13,7 +14,7 @@ cursor.execute(
         (jobCompany, jobTitle, salaryMin, salaryMax, remoteWork)
     VALUES (?, ?, ?, ?, ?)
     """,
-        ["Canada Life", "Reporting Data Analyst 12Mon Contract", 59800, 99700, True],
+        ["Columbia", "Sales Analyst", 72000, 82000, False],
 )
 jobInfoPrimaryKeyNum = cursor.lastrowid
 conn.commit()
@@ -25,20 +26,17 @@ cursor.executemany(
     VALUES (?, ?, ?, ?)
     """,
     [
-        (jobInfoPrimaryKeyNum, "Python", "Advanced", True),
-        (jobInfoPrimaryKeyNum, "SQL", "Advanced", True),
-        (jobInfoPrimaryKeyNum, "Power BI", "Intermediate", True),
-        (jobInfoPrimaryKeyNum, "Data Modelling", "Advanced", True),
-        (jobInfoPrimaryKeyNum, "Power BI PL-300", "Intermediate", False),
+        (jobInfoPrimaryKeyNum, "Microsoft", "Advanced", True),
+        (jobInfoPrimaryKeyNum, "MAP", "Intermediate", True),
+        (jobInfoPrimaryKeyNum, "Vendor Relationships", "Intermediate", True),
+        (jobInfoPrimaryKeyNum, "Documentation", "Intermediate", False),
         (jobInfoPrimaryKeyNum, "Communication", "Advanced", True),
-        (jobInfoPrimaryKeyNum, "Statistical Modelling", "Intermediate", True),
-        (jobInfoPrimaryKeyNum, "Financial Services", "Basic", False)
+        (jobInfoPrimaryKeyNum, "Troubleshooting", "Intermediate", True),
+        (jobInfoPrimaryKeyNum, "Sales Tools", "Intermediate", False)
     ]
 )
 conn.commit()
 
 conn.close()
 
-conn.commit()
 
-conn.close()
