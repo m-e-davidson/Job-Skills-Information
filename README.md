@@ -1,6 +1,6 @@
 README: Job Skills Information
-
-The purpose of the database is to identify what sills are most requested. Used to direct what skills are the most valuable to learn when searching for a data drive job.
+A self directed project to help me with my job search. I am putting together a list of job posting and what skills they are requesting.
+The information can then be used to help guide future skill development, by focusing on the most in-demand skills.
 
 Melissa Davidson
 
